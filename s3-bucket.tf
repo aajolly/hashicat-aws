@@ -1,11 +1,5 @@
-module "s3_bucket" {
-  source = "https://github.com/aajolly/terraform-aws-s3-bucket"
-
-  bucket = "my-s3-bucket"
-  acl    = "private"
+module "s3-bucket" {
+  source  = "app.terraform.io/aajolly-org/s3-bucket/aws"
+  version = "2.8.0"
   bucket_prefix = "aashish-jolly"
-
-  versioning = {
-    enabled = true
-  }
 }
